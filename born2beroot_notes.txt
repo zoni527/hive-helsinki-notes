@@ -1,2 +1,31 @@
-getent
+getent <entry>
+	- Get entries
+	getent group
+		getent group <group name>
 
+Encryption
+	phrase:	pipoK3nk4Ves!pull0
+
+adduser
+
+usermod -aG <group name> <user name>
+	- Append group to user, without append lose old groups
+
+Root
+	pswd:	lamppuIlmastointiNappaimist0#!
+
+jvarila
+	pswd:	h11r1m4tt0Rannekello_
+
+user42
+	pswd:	h11r1m4tt0Rannekello_
+
+
+Host name:	jvarila42
+
+hostnamectl
+	hostnamectl set-hostname <new name>
+
+Partitions
+	lsblk
+		- Shows partitions
