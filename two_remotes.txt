@@ -1,0 +1,7 @@
+// View verbose information about remotes
+git remote -v k
+git remote add all <git@github.com:original_repo.git>
+// Show more information about remotes
+git config -l | grep '^remote\.all'
+git remote set-url --add --push all <git@vogsphere-v2.hive.fi:project.git>
+git remote set-url --add --push all <git@github.com:original_repo.git>
