@@ -1,31 +1,40 @@
-getent <entry>
-	- Get entries
+--------------------------------------------------------------------------------
+Most important commands
+-----------------------
+Get entries: getent
 	getent group
 		getent group <group name>
-
+--------------------------------------------------------------------------------
 Encryption
-	phrase:	pipoK3nk4Ves!pull0
-
-adduser
-
-usermod -aG <group name> <user name>
+----------
+	phrase:	pipoKenkaVesipull0!
+--------------------------------------------------------------------------------
+Managing users and groups
+-------------------------
+[sudo] adduser	[flags] <username>
+[sudo] useradd	[flags] <username>
+[sudo] groupadd [flags] <username>
+[sudo] passwd	[flags] <username>
+[sudo] usermod -aG <group name> <user name>
 	- Append group to user, without append lose old groups
-
+--------------------------------------------------------------------------------
+Users and passwords
+-------------------
 Root
 	pswd:	lamppuIlmastointiNappaimist0#!
-
 jvarila
-	pswd:	h11r1m4tt0Rannekello_
-
+	pswd:	hiirimattoRannekell0_
 user42
-	pswd:	h11r1m4tt0Rannekello_
-
-
+	pswd:	h11r1m4tt0Rannekell0_
+--------------------------------------------------------------------------------
+Hostname
+--------
 Host name:	jvarila42
-
-hostnamectl
-	hostnamectl set-hostname <new name>
-
+hostnamectl set-hostname <new name>
+Files:	/etc/hostname	/etc/hosts
+--------------------------------------------------------------------------------
 Partitions
+----------
 	lsblk
 		- Shows partitions
+--------------------------------------------------------------------------------

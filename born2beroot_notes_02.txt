@@ -1,0 +1,37 @@
+--------------------------------------------------------------------------------
+GUI check methods
+-----------------
+
+ls /usr/bin/*session
+	byobu-session and dbus-runs-session are ok
+
+type Xorg
+	should not be found
+
+ls /usr/share/xsessions/
+
+dpkg -l | grep xserver
+	expexted output: x11-xserver-utils, xserver-common
+
+echo $XDG_CURRENT_DEKSTOP
+--------------------------------------------------------------------------------
+SSH login command
+-----------------
+ssh jvarila@localhost -p 2222
+--------------------------------------------------------------------------------
+AppArmor
+--------
+https://gitlab.com/apparmor/apparmor/-/wikis/home
+--------------------------------------------------------------------------------
+UFW
+---
+Uncomplicated Firewall
+	"...frontend for iptables and is paricularly well suited for host-based"
+	"firewalls. Ufw provides a framework for managing netfilter, as well as"
+	"command-line interface for manipulating the firewall."
+ufw enable
+ufw status verbose
+ufw status numbered
+ufw delete <rule>
+ufw allow <port range or port>
+--------------------------------------------------------------------------------
