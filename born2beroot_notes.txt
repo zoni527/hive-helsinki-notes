@@ -27,6 +27,14 @@ jvarila
 user42
 	pswd:	h11r1m4tt0Rannekell0_
 --------------------------------------------------------------------------------
+Password rules
+--------------
+[sudo] vim /etc/pam.d/common-password
+	PAM, Pluggable Auhtentication Modules
+		"a suite of libraries that allow a Linux system administrator to
+		configure methods to authenticate users"
+[sudo] vim /etc/login.defs
+--------------------------------------------------------------------------------
 Hostname
 --------
 Host name:	jvarila42
