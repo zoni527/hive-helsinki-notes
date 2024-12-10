@@ -1,22 +1,11 @@
 --------------------------------------------------------------------------------
-Most important commands
------------------------
-Get entries: getent
-	getent group
-		getent group <group name>
---------------------------------------------------------------------------------
 Encryption
 ----------
 	phrase:	pipoKenkaVesipull0!
 --------------------------------------------------------------------------------
-Managing users and groups
--------------------------
-[sudo] adduser	[flags] <username>
-[sudo] useradd	[flags] <username>
-[sudo] groupadd [flags] <username>
-[sudo] passwd	[flags] <username>
-[sudo] usermod -aG <group name> <user name>
-	- Append group to user, without append lose old groups
+SSH login command
+-----------------
+ssh jvarila@localhost -p 2222
 --------------------------------------------------------------------------------
 Users and passwords
 -------------------
@@ -25,7 +14,24 @@ Root
 jvarila
 	pswd:	hiirimattoRannekell0_
 user42
-	pswd:	h11r1m4tt0Rannekell0_
+	pswd:	hiirimattoRannekell0_
+--------------------------------------------------------------------------------
+getent
+------
+Get entries
+	getent group
+		getent group <group name>
+--------------------------------------------------------------------------------
+Managing users and groups
+-------------------------
+[sudo] useradd	[flags] <username>
+[sudo] passwd	[flags] <username>
+[sudo] groupadd [flags] <groupname>
+[sudo] usermod -aG <group name> <user name>
+[sudo] userdel	[flags] <username>
+[sudo] groupdel	[flags] <groupname>
+[sudo] adduser	[flags] <username>
+	- Append group to user, without append lose old groups
 --------------------------------------------------------------------------------
 Password rules
 --------------
@@ -34,10 +40,13 @@ Password rules
 		"a suite of libraries that allow a Linux system administrator to
 		configure methods to authenticate users"
 [sudo] vim /etc/login.defs
+	PASS_MAX_DAYS
+	PASS_MIN_DAYS
+	PASS_WARN_AGE
 --------------------------------------------------------------------------------
 Hostname
 --------
-Host name:	jvarila42
+Host name: jvarila42
 hostnamectl set-hostname <new name>
 Files:	/etc/hostname	/etc/hosts
 --------------------------------------------------------------------------------
@@ -45,4 +54,51 @@ Partitions
 ----------
 	lsblk
 		- Shows partitions
+--------------------------------------------------------------------------------
+GUI check methods
+-----------------
+
+ls /usr/bin/*session
+	byobu-session and dbus-runs-session are ok
+
+type Xorg
+	should not be found
+
+ls /usr/share/xsessions/
+	should not be found
+
+dpkg -l | grep xserver
+	expexted output: nada 
+
+echo $XDG_CURRENT_DESKTOP
+	expexted output: nada 
+--------------------------------------------------------------------------------
+SSH status
+----------
+service ssh status
+--------------------------------------------------------------------------------
+AppArmor
+--------
+Linux kernel security module
+Protects the operating system and applications from exploits and attacks.
+Defines boundaries and enforces good behaviour.
+https://gitlab.com/apparmor/apparmor/-/wikis/home
+command: aa-status
+--------------------------------------------------------------------------------
+UFW
+---
+Uncomplicated Firewall
+	"...frontend for iptables and is paricularly well suited for host-based"
+	"firewalls. Ufw provides a framework for managing netfilter, as well as"
+	"command-line interface for manipulating the firewall."
+ufw enable
+ufw status verbose
+ufw status numbered
+ufw delete <rule>
+ufw allow <port range or port>
+--------------------------------------------------------------------------------
+APT
+---
+APT = Advanged Package Tool
+	apt, apt-get, aptitude are all frontends to APT
 --------------------------------------------------------------------------------
