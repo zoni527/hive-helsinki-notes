@@ -91,6 +91,7 @@ Uncomplicated Firewall
 	"...frontend for iptables and is paricularly well suited for host-based"
 	"firewalls. Ufw provides a framework for managing netfilter, as well as"
 	"command-line interface for manipulating the firewall."
+service ufw status
 ufw enable
 ufw status verbose
 ufw status numbered
@@ -101,4 +102,8 @@ APT
 ---
 APT = Advanged Package Tool
 	apt, apt-get, aptitude are all frontends to APT
+--------------------------------------------------------------------------------
+Check sudo
+----------
+dpkg -s sudo
 --------------------------------------------------------------------------------
