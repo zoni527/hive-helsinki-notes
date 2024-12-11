@@ -7,6 +7,10 @@ SSH login command
 -----------------
 ssh jvarila@localhost -p 2222
 --------------------------------------------------------------------------------
+SSH status
+----------
+service ssh status
+--------------------------------------------------------------------------------
 Users and passwords
 -------------------
 Root
@@ -15,6 +19,7 @@ jvarila
 	pswd:	hiirimattoRannekell0_
 user42
 	pswd:	hiirimattoRannekell0_
+[sudo] vim /etc/passwd
 --------------------------------------------------------------------------------
 getent
 ------
@@ -28,10 +33,18 @@ Managing users and groups
 [sudo] passwd	[flags] <username>
 [sudo] groupadd [flags] <groupname>
 [sudo] usermod -aG <group name> <user name>
+	Append group to user, without append lose old groups
 [sudo] userdel	[flags] <username>
 [sudo] groupdel	[flags] <groupname>
 [sudo] adduser	[flags] <username>
-	- Append group to user, without append lose old groups
+	Goes through password creation, also creates home by default
+--------------------------------------------------------------------------------
+Hostname
+--------
+Host name: jvarila42
+hostname
+hostnamectl set-hostname <new name>
+Files:	/etc/hostname	/etc/hosts
 --------------------------------------------------------------------------------
 Password rules
 --------------
@@ -43,12 +56,6 @@ Password rules
 	PASS_MAX_DAYS
 	PASS_MIN_DAYS
 	PASS_WARN_AGE
---------------------------------------------------------------------------------
-Hostname
---------
-Host name: jvarila42
-hostnamectl set-hostname <new name>
-Files:	/etc/hostname	/etc/hosts
 --------------------------------------------------------------------------------
 Partitions
 ----------
@@ -73,17 +80,14 @@ dpkg -l | grep xserver
 echo $XDG_CURRENT_DESKTOP
 	expexted output: nada 
 --------------------------------------------------------------------------------
-SSH status
-----------
-service ssh status
---------------------------------------------------------------------------------
 AppArmor
 --------
 Linux kernel security module
 Protects the operating system and applications from exploits and attacks.
 Defines boundaries and enforces good behaviour.
 https://gitlab.com/apparmor/apparmor/-/wikis/home
-command: aa-status
+[sudo] systemctl status apparmor
+[sudo] apparmor_status
 --------------------------------------------------------------------------------
 UFW
 ---
