@@ -13,7 +13,32 @@
 --------------------------------------------------------------------------------
 PUSH SWAP
 ---------
-
+Project parts:
+	- User input handling
+		- Error detection
+	- Operating of underlying data type
+	- Implementation the set of allowed operations using the allowed
+	  operations of the underlying data type
+	- Solving for a correct sorting sequence
+		- Look into or explore possible algorhitms
+	- Output
+--------------------------------------------------------------------------------
+Underlying data type
+--------------------
+Stack
+	- Allowed operations are push and pop, maybe peek
+	- Singly linked list, top is the tail
+		- Fast insertion and popping
+		- Store length
+--------------------------------------------------------------------------------
+Programming approach
+--------------------
+Object oriented or functional?
+--------------------------------------------------------------------------------
+The two stacks
+--------------
+Should I have the operations as member functions or functions that take two
+pointer arguments?
 --------------------------------------------------------------------------------
 sa
 --
