@@ -1,5 +1,5 @@
 // View verbose information about remotes
-git remote -v k
+git remote -v
 git remote add all <git@github.com:original_repo.git>
 // Show more information about remotes
 git config -l | grep '^remote\.all'
