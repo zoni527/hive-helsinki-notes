@@ -1,0 +1,5 @@
+./pipex file1 cat cat file/asd 		//comment and return value diff
+./pipex file1 cat cat file/		//comment diff
+./pipex file1 "cat" "cat" fi/le7 	//comment diff, return value diff
+./pipex file1 "cat" "cat" /file7	//comment diff, return value diff
+./pipex file1 cat ./echo.sh file7	// return value diff
