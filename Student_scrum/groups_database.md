@@ -1,0 +1,53 @@
+# Group database breakdown
+
+## Prerequisites
+- Data file
+    - Format for data
+
+## Program architexture
+- Database loading
+    - File exists
+    - File has correct permissions
+    - File is non empty
+    - File has valid format
+- Parsing user input
+    - Input validation
+        - Correct numbers
+            - Overflow
+            - Size
+            - Sign
+        - Correct commands
+            - List of commands
+            - Exact match
+            - Case?
+        - Correct fields
+            - Extra fields allowed?
+            - Format for fields correct
+            - No extra input or code injection
+            - Correct order of inputs
+    - Command classification
+- Database query (getting information out)
+    - Valid commands
+        - GET_USER
+        - GET_GROUP
+        - USER_ADD
+        - USER_REMOVE
+        - USER_EDIT
+        - USER_LIST
+        - GROUP_ADD
+        - GROUP_REMOVE
+        - GROUP_EDIT
+        - GROUP_LIST
+        - LIST_COMMANDS
+        - EXIT
+    - What groups exist
+    - What users exist
+    - Which users are part of a group
+    - Which groups does a user belong to
+    - How many groups
+    - How many users
+- Signal handling
+    - If receives SIGTERM remove or save changes
+- Database saving
+    - Remove old file vs modify existing
+    - See if file still exists/has been changed after starting the program
